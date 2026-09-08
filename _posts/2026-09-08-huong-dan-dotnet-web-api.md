@@ -1,73 +1,130 @@
 ---
 layout: post
-title: "[Chủ đề] Hướng dẫn xây dựng RESTful API chuẩn Clean Architecture với .NET 8"
-date: 2026-09-08 10:00:00 +0700
-categories: [Backend, DotNet]
-tags: [csharp, dotnet, clean-architecture, api, postgresql]
-excerpt: "Bài viết chia sẻ chi tiết cách tổ chức thư mục, phân tách Controller - Service - Repository và áp dụng JWT Authentication trong .NET 8."
+title: "Hướng dẫn xây dựng RESTful API đơn giản với .NET 8 Web API"
+date: 2026-09-08
+categories: [Dotnet, Backend, API]
 ---
 
-## 📌 Giới thiệu bài viết
-Trong bài viết này, mình sẽ cùng các bạn tìm hiểu cách thiết kế một hệ thống RESTful API hoàn chỉnh theo mô hình **Clean Architecture** sử dụng **.NET 8** và **PostgreSQL**.
+Trong bài viết này, chúng ta sẽ cùng nhau tạo nhanh một dịch vụ RESTful API quản lý sản phẩm bằng **.NET 8 Web API**.
 
-### Vấn đề gặp phải
-Khi dự án phình to, việc viết toàn bộ logic trong Controller khiến code bị rối (Spaghetti code) và khó Unit Test...
-
----
-
-## 🛠 1. Chuẩn bị môi trường & Công cụ
+## 1. Yêu cầu chuẩn bị
 - .NET 8 SDK
-- PostgreSQL Server & pgAdmin
-- Docker (Tùy chọn)
-- Visual Studio / VS Code
+- Visual Studio 2022 hoặc VS Code
+- Postman (hoặc Dùng Swagger tích hợp sẵn)
 
----
+## 2. Khởi tạo Dự án
 
-## 🏗 2. Thiết kế kiến trúc các tầng (Architecture)
+Mở Terminal và chạy lệnh sau để tạo Web API dự án mới:
 
-### Tầng Domain (Core)
-Chứa các Entity và Interfaces cơ bản...
+```bash
+dotnet new webapi -n ProductManagementApi
+cd ProductManagementApi
+3. Tạo Model Product
+Tạo file Models/Product.cs:
 
-```csharp
-public class Product
+C#
+namespace ProductManagementApi.Models
 {
-    public Guid Id { get; set; }
-    public string Name { get; set; } = string.Empty;
-    public decimal Price { get; set; }
+    public class Product
+    {
+        public int Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public decimal Price { get; set; }
+    }
 }
-Tầng Application & Infrastructure
-Xử lý Business Logic và truy xuất cơ sở dữ liệu qua Entity Framework Core...
+4. Tạo Controller
+Tạo file Controllers/ProductsController.cs:
 
-📊 3. Đánh giá & Tối ưu hiệu năng
-Caching với Redis: Giảm thời gian phản hồi từ 120ms xuống còn 15ms cho các truy vấn đọc.
+C#
+using Microsoft.AspNetCore.Mvc;
+using ProductManagementApi.Models;
 
-Indexing Database: Tối ưu các câu lệnh SQL Query.
+namespace ProductManagementApi.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class ProductsController : ControllerBase
+    {
+        private static List<Product> _products = new List<Product>
+        {
+            new Product { Id = 1, Name = "Laptop Dell XPS", Price = 1500 },
+            new Product { Id = 2, Name = "Chuột Logitech MX Master 3S", Price = 100 }
+        };
 
-💡 Bài học rút ra (Takeaways)
-Tách biệt rõ ràng vai trò của từng Layer giúp việc bảo trì và viết Unit Test dễ dàng hơn.
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            return Ok(_products);
+        }
 
-Luôn chú trọng việc Validation dữ liệu ngay từ tầng Request.
+        [HttpPost]
+        public IActionResult Create(Product product)
+        {
+            product.Id = _products.Count + 1;
+            _products.Add(product);
+            return CreatedAtAction(nameof(GetAll), new { id = product.Id }, product);
+        }
+    }
+}
+5. Chạy ứng dụng
+Chạy lệnh:
 
-🔗 Tài liệu tham khảo
-Official Microsoft .NET Documentation
+Bash
+dotnet run
+Truy cập https://localhost:7xxx/swagger để kiểm tra các API vừa tạo.
 
-Clean Architecture with ASP.NET Core
+Kết luận
+Chỉ với vài thao tác cơ bản, bạn đã có một RESTful API hoàn chỉnh sẵn sàng phát triển thêm các tính năng như kết nối CSDL Entity Framework Core!
 
 
 ---
 
-## 5. FILE `README.md` DÀNH CHO REPOSITORY GITHUB
-*File này hiển thị ngay khi truy cập vào Repository của bạn.*
-
+### 4. `_posts/2026-09-08-test-post.md`
 ```markdown
-# 🚀 Personal Tech Blog - Cao Khôi Nguyên
+---
+layout: post
+title: "Bài viết thử nghiệm (Test Post)"
+date: 2026-09-08
+categories: [Test]
+---
 
-Chào mừng đến với Repository chứa mã nguồn Blog cá nhân của tôi!
+# Bài viết kiểm tra giao diện
 
-- **Live Site:** [https://Nguyen06-CSE.github.io](https://Nguyen06-CSE.github.io)
-- **Công nghệ sử dụng:** GitHub Pages, Jekyll, Markdown, HTML/CSS.
+Đây là bài viết dùng để kiểm tra khả năng hiển thị Markdown và layout `post.html` trên Jekyll.
 
-## 📝 Cách đăng bài mới
-1. Clone repo về máy: `git clone [https://github.com/Nguyen06-CSE/Nguyen06-CSE.github.io.git](https://github.com/Nguyen06-CSE/Nguyen06-CSE.github.io.git)`
-2. Tạo file mới trong thư mục `_posts/` theo định dạng: `YYYY-MM-DD-ten-bai-viet.md`
-3. Soạn thảo nội dung theo cú pháp Markdown.
+### Kiểm tra Code Block Python
+```python
+def say_hello(name: str) -> str:
+    return f"Hello, {name}! Welcome to my blog."
+
+print(say_hello("Khoi Nguyen"))
+Kiểm tra Danh sách Checklist
+[x] Tạo cấu trúc thư mục
+
+[x] Cấu hình file _config.yml
+
+[x] Viết bài blog đầu tiên
+
+[ ] Push code lên GitHub Pages
+
+
+---
+
+### 5. `_config.yml`
+```yaml
+title: "Khoi Nguyen | Backend & Tech Blog"[cite: 1]
+author: "Cao Khôi Nguyên"[cite: 1]
+email: "nguyen.cse06@gmail.com"[cite: 1]
+description: "Blog chia sẻ hành trình học tập, kiến thức Backend (.NET, Node.js, FastAPI), thiết kế hệ thống và trải nghiệm lập trình."[cite: 1]
+url: "https://Nguyen06-CSE.github.io"[cite: 1]
+theme: minima[cite: 1]
+
+# Cấu hình mạng xã hội
+github_username: Nguyen06-CSE[cite: 1]
+linkedin_username: alexnguyen-fs[cite: 1]
+
+# Jekyll options
+markdown: kramdown[cite: 1]
+plugins:[cite: 1]
+  - jekyll-feed[cite: 1]
+  - jekyll-seo-tag[cite: 1]

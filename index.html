@@ -3,16 +3,16 @@ layout: default
 title: Trang chủ
 ---
 
-<h1>Xin chào! Tôi là Khôi Nguyên 👋</h1>
-<p>Chào mừng bạn đến với blog cá nhân của tôi. Đây là nơi tôi lưu trữ kiến thức về Backend Development, Database, System Design và các dự án cá nhân.</p>
+<h1>Xin chào! Tôi là Khôi Nguyên 👋</h1>[cite: 3]
+<p>Chào mừng bạn đến với blog cá nhân của tôi. Đây là nơi tôi lưu trữ kiến thức về Backend Development, Database, System Design và các dự án cá nhân.</p>[cite: 3]
 
-<h2>Bài viết mới nhất</h2>
+<h2>Bài viết mới nhất</h2>[cite: 3]
 <ul>
-  {% for post in site.posts %}
+  {% for post in site.posts %}[cite: 3]
     <li>
-      <span class="post-date">{{ post.date | date: "%d/%m/%Y" }}</span> — 
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+      <span class="post-date">{{ post.date | date: "%d/%m/%Y" }}</span> — [cite: 3]
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>[cite: 3]
+      <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>[cite: 3]
     </li>
-  {% endfor %}
+  {% endfor %}[cite: 3]
 </ul>
