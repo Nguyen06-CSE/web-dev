@@ -1,0 +1,18 @@
+---
+layout: home
+title: Trang chủ
+---
+
+<h1>Xin chào! Tôi là Khôi Nguyên 👋</h1>
+<p>Chào mừng bạn đến với blog cá nhân của tôi. Đây là nơi tôi lưu trữ kiến thức về Backend Development, Database, System Design và các dự án cá nhân.</p>
+
+<h2>Bài viết mới nhất</h2>
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <span class="post-date">{{ post.date | date: "%d/%m/%Y" }}</span> — 
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+    </li>
+  {% endfor %}
+</ul>
