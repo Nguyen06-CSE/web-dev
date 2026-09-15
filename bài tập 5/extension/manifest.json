@@ -1,0 +1,14 @@
+
+{
+  "manifest_version": 3,
+  "name": "Change Background Color",
+  "version": "1.0",
+  "description": "Add-on đơn giản giúp thay đổi màu nền trang web",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_title": "Đổi màu nền"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
