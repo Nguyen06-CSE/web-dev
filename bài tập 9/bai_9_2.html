@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="'vi">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>bai 9.2</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      .topbar {
+        background-color: #ee4d2d;
+        padding: 8px 3px;
+        display: flex;
+        justify-content: flex-end; 
+      }
+      .navbar-menu {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+      .navbar-menu li {
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar-menu li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .navbar-menu li :hover {
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .navbar-menu li.separator {
+        width: 1px;
+        height: 13px;
+        background-color: rgba(255, 255, 255, 0.4);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="topbar">
+      <ul class="navbar-menu">
+        <li>
+          <a href="#"><i class="fa-regular fa-bell"></i>Thông báo</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-regular fa-circle-question"></i>hỗ trợ</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-globe"></i>Tiếng việt</a>
+        </li>
+        <li>
+          <a href="#"><b>Đăng Ký</b></a>
+        </li>
+        <li class="separator"></li>
+        <li>
+          <a href="#"><b>Đăng Nhập</b></a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
