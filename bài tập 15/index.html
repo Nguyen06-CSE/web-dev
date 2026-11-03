@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 15 - JavaScript Cú pháp, Kiểu dữ liệu và Biến</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --code-bg: #f1f5f9;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 24px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        h1 {
+            color: #0f172a;
+            margin: 0 0 8px 0;
+            font-size: 1.8rem;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            padding: 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #1e3a8a;
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12px;
+        }
+
+        th, td {
+            border: 1px solid var(--border);
+            padding: 10px 14px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f8fafc;
+            font-weight: 600;
+        }
+
+        code {
+            background: var(--code-bg);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.9em;
+            color: #d946ef;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.85em;
+            background: #e0e7ff;
+            color: #3730a3;
+        }
+
+        .badge.object { background: #fef3c7; color: #92400e; }
+        .badge.number { background: #dbeafe; color: #1e40af; }
+        .badge.string { background: #dcfce7; color: #166534; }
+        .badge.boolean { background: #f3e8ff; color: #6b21a8; }
+        .badge.undefined { background: #fee2e2; color: #991b1b; }
+
+        button {
+            background-color: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 9px 18px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: var(--primary-hover);
+        }
+
+        input[type="text"] {
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 0.95rem;
+            width: 260px;
+        }
+
+        pre {
+            background: #1e293b;
+            color: #f8fafc;
+            padding: 14px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 0.9rem;
+            margin-top: 12px;
+        }
+
+        .interactive-box {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+
+        .result-box {
+            margin-top: 12px;
+            padding: 10px;
+            border-radius: 6px;
+            background: #f8fafc;
+            border: 1px solid var(--border);
+        }
+
+        .quiz-item {
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed var(--border);
+        }
+        .quiz-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .quiz-item strong.answer {
+            color: #16a34a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bài tập 15: Cú pháp, kiểu dữ liệu và biến</h1>
+            <p class="subtitle">Tham khảo: Blog Langbiang (Lê Gia Công) - JavaScript (2)</p>
+        </header>
+
+        <!-- Bài tập 2b -->
+        <section class="card">
+            <h2>Bài tập 2b: Kiểm tra kiểu dữ liệu với toán tử typeof</h2>
+            <p>Bảng kết quả phân tích giá trị và kiểu dữ liệu trả về của toán tử <code>typeof</code>:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">STT</th>
+                        <th style="width: 140px;">Dữ liệu (Value)</th>
+                        <th style="width: 140px;">typeof</th>
+                        <th>Giải thích chi tiết</th>
+                    </tr>
+                </thead>
+                <tbody id="typeofTableBody">
+                    <!-- Được render tự động từ main.js -->
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 20px; font-size: 1.1rem;">Thực nghiệm nhanh với biểu thức bất kỳ:</h3>
+            <div class="interactive-box">
+                <input type="text" id="evalInput" placeholder="Ví dụ: [1,2,3] hoặc {a: 1} hoặc 3.14">
+                <button id="btnCheck">Kiểm tra typeof</button>
+            </div>
+            <div id="evalResult" class="result-box">Nhập biểu thức và bấm "Kiểm tra typeof" để xem kết quả trực tiếp.</div>
+        </section>
+
+        <!-- Bài tập 2a -->
+        <section class="card">
+            <h2>Bài tập 2a: Thực hành mã nguồn phần lý thuyết</h2>
+            <p>Thực thi các đoạn mã về câu lệnh, khối lệnh, biến <code>let</code>, <code>const</code>:</p>
+            <button id="btnRunDemo">Chạy Demo Lý Thuyết</button>
+            <pre id="demoOutput">// Bấm nút bên trên để chạy mã thực thi...</pre>
+        </section>
+
+        <!-- Phần trắc nghiệm 2.6 -->
+        <section class="card">
+            <h2>2.6 Câu hỏi trắc nghiệm ôn tập</h2>
+
+            <div class="quiz-item">
+                <p><strong>Câu 1:</strong> Trong JavaScript, đoạn mã sau: <code>const case = 'dung tu khoa dat ten bien';</code> bị lỗi gì?</p>
+                <p>&bull; <strong class="answer">&check; Đáp án: D. Dùng từ khóa để đặt tên biến</strong> (<code>case</code> là từ khóa dành riêng của lệnh switch...case).</p>
+            </div>
+
+            <div class="quiz-item">
+                <p><strong>Câu 2:</strong> Trong JavaScript, dòng mã sau sẽ xuất gì ra màn hình? <code>typeof(3.1415);</code></p>
+                <p>&bull; <strong class="answer">&check; Đáp án: B. Number</strong> (Tất cả số nguyên và số thực trong JavaScript đều thuộc kiểu <code>number</code>).</p>
+            </div>
+
+            <div class="quiz-item">
+                <p><strong>Câu 3:</strong> Khi lập trình, một biến có tên là <code>fullName</code> thì nó được viết theo phong cách gì?</p>
+                <p>&bull; <strong class="answer">&check; Đáp án: C. camelCase</strong> (Phong cách con lạc đà: từ đầu viết thường, các từ sau viết hoa chữ cái đầu).</p>
+            </div>
+
+            <div class="quiz-item">
+                <p><strong>Câu 4:</strong> Trong JavaScript, tên biến nào sau đây bị lỗi?</p>
+                <p>&bull; <strong class="answer">&check; Đáp án: A. <code>var full-name = 'nguyen van teo';</code></strong> (Dấu gạch ngang <code>-</code> bị hiểu nhầm là phép toán trừ).</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
