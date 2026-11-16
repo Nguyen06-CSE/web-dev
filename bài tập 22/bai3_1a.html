@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Bài tập 3.1a - Lý thuyết định dạng màu & nền</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    /* 1. Ví dụ màu chữ (color) - kế thừa và tô màu cả đường viền (border) */
+    .vi-du-color {
+      border: 4px dashed;
+      color: #508C19;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* 2. Ví dụ màu nền (background-color) */
+    .vi-du-bg {
+      border: 4px dashed;
+      color: #508C19;
+      background-color: #B4BDE6;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* 3. Ví dụ giới hạn vùng nền (background-clip: content-box) */
+    .vi-du-clip {
+      border: 4px dashed;
+      padding: 15px;
+      color: #043527;
+      background-color: #7ccfaf;
+      background-clip: content-box;
+      margin-bottom: 20px;
+    }
+
+    /* 4. Ví dụ làm mờ phần tử (opacity) */
+    .khung-toi {
+      background-color: #333333;
+      padding: 20px;
+    }
+    .khung-toi h2 {
+      color: #00FF00;
+      background-color: #FFFFFF;
+      opacity: 0.25;
+      padding: 10px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>1. Màu chữ & đường viền (color)</h3>
+  <blockquote class="vi-du-color">
+    <p>Đây là ví dụ về màu chữ <em>(foreground color)</em> — chữ và viền đều nhận màu #508C19.</p>
+  </blockquote>
+
+  <h3>2. Màu nền mặc định (border-box)</h3>
+  <blockquote class="vi-du-bg">
+    <p>Đây là ví dụ về màu nền <em>(background-color)</em> — nền tràn ra tận mép ngoài của đường viền.</p>
+  </blockquote>
+
+  <h3>3. Giới hạn vùng nền (background-clip: content-box)</h3>
+  <blockquote class="vi-du-clip">
+    <p>Đây là ví dụ về background-clip — vùng nền chỉ nằm gọn trong phần nội dung, không tràn ra padding.</p>
+  </blockquote>
+
+  <h3>4. Độ mờ phần tử (opacity: 0.25)</h3>
+  <div class="khung-toi">
+    <h2>Tiêu đề bị làm mờ cả chữ lẫn nền trắng (opacity: 0.25)</h2>
+  </div>
+
+</body>
+</html>

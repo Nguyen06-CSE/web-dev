@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Bài tập 3.2a - Lý thuyết Pseudo-class, Pseudo-element & Attribute</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
+    section { border-bottom: 1px solid #ddd; padding-bottom: 15px; margin-bottom: 20px; }
+
+    /* 1. Pseudo-class cho liên kết (đúng thứ tự LVFHA) */
+    a.demo-link { text-decoration: none; padding: 4px 8px; }
+    a.demo-link:link { color: maroon; }
+    a.demo-link:visited { color: gray; }
+    a.demo-link:focus { color: maroon; background-color: #ffd9d9; }
+    a.demo-link:hover { color: maroon; background-color: #ffd9d9; }
+    a.demo-link:active { color: red; background-color: #ffd9d9; }
+
+    /* 2. Pseudo-class theo cấu trúc (:first-child) & Form (:focus, :checked) */
+    ul li:first-child { color: red; font-weight: bold; }
+    input[type="text"]:focus { background-color: yellow; }
+    input[type="checkbox"]:checked + label { color: red; font-weight: bold; }
+    input[type="checkbox"]:checked { box-shadow: 0 0 0 3px hotpink; }
+
+    /* 3. Pseudo-element (::first-letter, ::before, ::after) */
+    p.dropcap::first-letter {
+      color: white;
+      background-color: #333;
+      border-radius: 2px;
+      font-size: 200%;
+      box-shadow: 3px 3px 0 yellow;
+      padding: 4px 8px;
+      margin-right: 6px;
+      float: left;
+    }
+    p.note::before {
+      content: "Đọc thêm: ";
+      color: red;
+      font-weight: bold;
+    }
+    p.note::after {
+      content: " (Kết thúc)";
+      color: red;
+      font-weight: bold;
+    }
+
+    /* 4. Bộ chọn theo thuộc tính (Attribute selectors) */
+    .box-attr span { display: inline-block; padding: 6px 12px; margin: 4px; border: 1px solid #ccc; }
+    span[title~="con"] { border: 3px solid green; }   /* Khớp từ "con" tách biệt */
+    span[title|="con"] { background-color: #fff3cd; } /* Khớp "con" hoặc "con-..." */
+    span[title*="on"]  { color: blue; }               /* Khớp mọi chuỗi chứa "on" */
+  </style>
+</head>
+<body>
+
+  <section>
+    <h3>1. Trạng thái liên kết (:link, :visited, :hover, :active)</h3>
+    <a class="demo-link" href="#test">Rê chuột hoặc bấm vào liên kết này</a>
+  </section>
+
+  <section>
+    <h3>2. Cấu trúc (:first-child) & Form (:focus, :checked)</h3>
+    <ul>
+      <li>HTML (Phần tử con đầu tiên - màu đỏ)</li>
+      <li>CSS</li>
+      <li>JS</li>
+    </ul>
+    <p><input type="text" placeholder="Bấm vào đây để xem :focus"></p>
+    <p>
+      <input type="checkbox" id="opt-in">
+      <label for="opt-in">Đánh dấu chọn vào ô này</label>
+    </p>
+  </section>
+
+  <section>
+    <h3>3. Phần tử giả (::first-letter, ::before, ::after)</h3>
+    <p class="dropcap">Ví dụ làm nổi chữ cái đầu tiên của một đoạn văn bản (Drop cap) bằng bộ chọn ::first-letter trong CSS.</p>
+    <p class="note">Nội dung đoạn văn có chèn thêm chữ ở đầu và cuối bằng CSS.</p>
+  </section>
+
+  <section class="box-attr">
+    <h3>4. Bộ chọn thuộc tính</h3>
+    <span title="con gà">title="con gà"</span>
+    <span title="vịt con">title="vịt con"</span>
+    <span title="con-vịt">title="con-vịt"</span>
+    <span title="anh-chon">title="anh-chon"</span>
+  </section>
+
+</body>
+</html>
