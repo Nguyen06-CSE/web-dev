@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>08 - radial-gradient</title>
+<style>
+
+body { font-family: sans-serif; }
+p { width: 300px; height: 100px; padding: 20px; display: inline-block; margin: 8px; vertical-align: top; }
+.r1 { background-image: radial-gradient(yellow, green); }
+.r2 { background-image: radial-gradient(circle, yellow, green); }
+.r3 { background-image: radial-gradient(circle at 80% 20%, yellow, green); }
+.r4 { background-image: radial-gradient(circle, yellow 10%, green); }
+.r5 { background-image: radial-gradient(circle, yellow 50%, green); }
+.r6 { background-image: radial-gradient(circle closest-side, yellow, green); }
+.r7 { background-image: radial-gradient(circle farthest-corner at 20% 30%, yellow, green); }
+.r8 { background-image: repeating-radial-gradient(circle, yellow, green 20px); }
+
+</style>
+</head>
+<body>
+<h1>radial-gradient</h1>
+<p class="r1">mặc định (ellipse)</p>
+<p class="r2">circle</p>
+<p class="r3">circle at 80% 20%</p>
+<p class="r4">yellow 10%</p>
+<p class="r5">yellow 50%</p>
+<p class="r6">closest-side</p>
+<p class="r7">farthest-corner at 20% 30%</p>
+<p class="r8">repeating-radial-gradient</p>
+</body></html>

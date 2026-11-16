@@ -1,0 +1,94 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 380px;
+    padding: 1rem;
+    background-color: #334155;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+    border-radius: 1.5rem;
+}
+
+.calculator-display {
+    background-color: #1e293b;
+    color: #f8fafc;
+    font-size: 2.5rem;
+    text-align: right;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.75rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    height: 5.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    line-height: 1;
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+}
+
+.key {
+    padding: 1.5rem 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out, transform 0.1s ease-in-out;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.15);
+}
+
+.key-digit, .key-decimal {
+    background-color: #475569;
+    color: #f8fafc;
+}
+
+.key-digit:hover, .key-decimal:hover {
+    background-color: #64748b;
+}
+
+.key-operator {
+    background-color: #f97316;
+    color: #fff;
+}
+
+.key-operator:hover {
+    background-color: #fb923c;
+}
+
+.key-ac {
+    background-color: #ef4444;
+    color: #fff;
+}
+
+.key-ac:hover {
+    background-color: #f87171;
+}
+
+.key-equals {
+    background-color: #10b981;
+    color: #fff;
+    grid-column: span 2;
+}
+
+.key-equals:hover {
+    background-color: #34d399;
+}
+
+.key:active {
+    transform: translateY(1px);
+}

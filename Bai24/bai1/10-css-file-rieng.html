@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10 - CSS ở tập tin riêng</title>
+<!-- Cách 1: phần tử link. @import nằm trong clientsite.css gộp thêm 3 tập tin con -->
+<link rel="stylesheet" type="text/css" href="clientsite.css">
+<!-- Cách 2 (dùng @import trong phần tử style) -->
+<style>
+  @import url("forms.css");   /* @import phải đứng trước mọi bộ chọn */
+  p.note { font-style: italic; }
+</style>
+</head>
+<body>
+<h1>CSS ở tập tin riêng</h1>
+<ul class="nav"><li><a href="#">Trang chủ</a></li><li><a href="#">Giới thiệu</a></li><li><a href="#">Liên hệ</a></li></ul>
+<form><input placeholder="Nhập tên"> <button type="button">Gửi</button></form>
+<p class="note">Typography từ type.css, form từ forms.css, menu từ list-nav.css, nền cam từ clientsite.css.</p>
+</body>
+</html>

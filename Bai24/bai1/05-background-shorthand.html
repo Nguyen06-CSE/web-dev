@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>05 - thuộc tính background rút gọn</title>
+<style>
+
+body { font-family: sans-serif; background: white url(star.png) no-repeat right top fixed; }
+/* Bẫy ghi đè khi dùng thuộc tính rút gọn */
+.demo1 h3 { background: red url(dot.png) repeat-x; padding: 20px; margin: 10px 0; color: #fff; }
+.demo1 h3.sai { background: green; }                 /* ghi đè luôn cả background-image => mất ảnh */
+.demo1 h3.dung { background-color: green; }          /* chỉ đổi màu nền, giữ ảnh */
+
+</style>
+</head>
+<body>
+<h1>background rút gọn</h1>
+<p>Body dùng: <code>background: white url(star.png) no-repeat right top fixed;</code></p>
+<div class="demo1">
+  <h3>h3 gốc: red + dot.png repeat-x</h3>
+  <h3 class="sai">h3 sai: background: green; (mất ảnh)</h3>
+  <h3 class="dung">h3 đúng: background-color: green; (còn ảnh)</h3>
+</div>
+</body></html>

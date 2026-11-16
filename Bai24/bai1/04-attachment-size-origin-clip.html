@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>04 - attachment, size, origin, clip</title>
+<style>
+
+body { font-family: sans-serif; background: #fafafa url(star.png) no-repeat right top fixed; min-height: 250vh; }
+.box { width: 280px; height: 180px; border: 14px dashed #c44; padding: 20px; margin: 8px; display: inline-block; vertical-align: top;
+       background-color: #def; background-image: url(star.png); background-repeat: no-repeat; }
+.box span { background: #fff; padding: 2px 6px; }
+.s1 { background-size: 100px 100px; }
+.s2 { background-size: contain; }
+.s3 { background-size: cover; }
+.o1 { background-origin: border-box; background-position: left top; }
+.o2 { background-origin: padding-box; background-position: left top; }
+.o3 { background-origin: content-box; background-position: left top; }
+.c1 { background-repeat: repeat; background-clip: border-box; }
+.c2 { background-repeat: repeat; background-clip: padding-box; }
+.c3 { background-repeat: repeat; background-clip: content-box; }
+
+</style>
+</head>
+<body>
+<h1>attachment / size / origin / clip</h1>
+<p>Ngôi sao ở góc trên phải của trang dùng <code>background-attachment: fixed</code> — cuộn trang xuống, nó đứng yên.</p>
+<h3>background-size</h3>
+<div class="box s1"><span>100px 100px</span></div>
+<div class="box s2"><span>contain</span></div>
+<div class="box s3"><span>cover</span></div>
+<h3>background-origin (với position: left top)</h3>
+<div class="box o1"><span>border-box</span></div>
+<div class="box o2"><span>padding-box</span></div>
+<div class="box o3"><span>content-box</span></div>
+<h3>background-clip (với repeat)</h3>
+<div class="box c1"><span>border-box</span></div>
+<div class="box c2"><span>padding-box</span></div>
+<div class="box c3"><span>content-box</span></div>
+</body></html>

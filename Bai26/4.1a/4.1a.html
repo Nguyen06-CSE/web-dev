@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Minh họa Display và Box-Shadow</title>
+    <style>
+        /* Thay đổi kiểu hiển thị menu ngang */
+        ul.navigation {
+            list-style: none;
+            padding: 0;
+        }
+        ul.navigation li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        ul.navigation li a {
+            display: block;
+            padding: 8px 16px;
+            background-color: #334155;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* 4 kiểu đổ bóng hộp (A, B, C, D) và đa đổ bóng */
+        .box {
+            width: 150px;
+            height: 80px;
+            background-color: #e2e8f0;
+            margin: 25px;
+            padding: 10px;
+            display: inline-block;
+        }
+        .box-a { box-shadow: 5px 10px #64748b; }
+        .box-b { box-shadow: 5px 10px 4px #64748b; }
+        .box-c { box-shadow: 5px 10px 4px 8px #64748b; }
+        .box-d { box-shadow: 5px 10px 4px #64748b inset; }
+        .box-multi { box-shadow: 5px 10px 4px 10px green inset, 5px 10px yellow; }
+    </style>
+</head>
+<body>
+    <ul class="navigation">
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="#">Liên hệ</a></li>
+    </ul>
+
+    <div>
+        <div class="box box-a">Hình (A)</div>
+        <div class="box box-b">Hình (B)</div>
+        <div class="box box-c">Hình (C)</div>
+        <div class="box box-d">Hình (D)</div>
+        <div class="box box-multi">Đa đổ bóng</div>
+    </div>
+</body>
+</html>

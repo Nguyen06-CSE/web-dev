@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>02 - background-repeat</title>
+<style>
+
+body { font-family: sans-serif; }
+.box { width: 260px; height: 190px; border: 2px solid #333; margin: 8px; display: inline-block; vertical-align: top;
+       background-image: url(star.png); background-color: #eef; }
+.box span { background: #fff; padding: 2px 6px; }
+.r1 { background-repeat: repeat; }
+.r2 { background-repeat: repeat-x; }
+.r3 { background-repeat: repeat-y; }
+.r4 { background-repeat: no-repeat; }
+.r5 { background-repeat: space; }
+.r6 { background-repeat: round; }
+
+</style>
+</head>
+<body>
+<h1>background-repeat</h1>
+<div class="box r1"><span>repeat (mặc định)</span></div>
+<div class="box r2"><span>repeat-x</span></div>
+<div class="box r3"><span>repeat-y</span></div>
+<div class="box r4"><span>no-repeat</span></div>
+<div class="box r5"><span>space (giữ kích thước, giãn khoảng cách)</span></div>
+<div class="box r6"><span>round (co dãn ảnh cho vừa khít)</span></div>
+</body></html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>06 - nhiều ảnh nền</title>
+<style>
+
+body { font-family: sans-serif; min-height: 100vh; margin: 0;
+  /* cho trình duyệt cũ không hỗ trợ nhiều ảnh trong background */
+  background-image: url(img/image1.png);
+  background:
+    url(img/image1.png) left top no-repeat,
+    url(img/image2.png) center center no-repeat,
+    url(img/image3.png) right bottom no-repeat;
+  background-color: papayawhip; /* màu nền dự phòng */
+}
+
+</style>
+</head>
+<body>
+<h1>Nhiều ảnh nền</h1>
+<p>Đỏ (trên cùng, góc trái trên), xanh lá (giữa), xanh dương (góc phải dưới). Ảnh liệt kê trước nằm phía trên.</p>
+</body></html>
