@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 16.1 - Tăng tính ngữ nghĩa cho Form (label, fieldset, legend)</title>
+</head>
+<body>
+
+    <h1>Bài tập 16.1: Các đoạn mã phần lý thuyết</h1>
+
+    <!-- 1. Kết hợp ngầm (Implicit association) & fieldset + legend -->
+    <h2>1. Kết hợp ngầm (đặt input bên trong label) và nhóm fieldset</h2>
+    <form action="#" method="get">
+        <fieldset>
+            <legend>Bạn bao nhiêu tuổi?</legend>
+            <ol>
+                <li><label><input type="radio" name="tuoi" value="duoi24" checked> dưới 24</label></li>
+                <li><label><input type="radio" name="tuoi" value="25-34"> 25 tới 34</label></li>
+                <li><label><input type="radio" name="tuoi" value="35-44"> 35 tới 44</label></li>
+                <li><label><input type="radio" name="tuoi" value="tren45"> 45+</label></li>
+            </ol>
+        </fieldset>
+    </form>
+
+    <hr>
+
+    <!-- 2. Kết hợp tường minh (Explicit association) dùng thuộc tính for và id -->
+    <h2>2. Kết hợp tường minh (dùng thuộc tính for trỏ tới id)</h2>
+    <form id="form-login" action="#" method="post">
+        <fieldset>
+            <legend>Thông tin đăng nhập</legend>
+            <p>
+                <label for="form-login-ho-ten">Họ tên: </label>
+                <input type="text" name="ho-ten" id="form-login-ho-ten">
+            </p>
+            <p>
+                <label for="form-login-email">Email: </label>
+                <input type="text" name="email" id="form-login-email">
+            </p>
+        </fieldset>
+    </form>
+
+</body>
+</html>

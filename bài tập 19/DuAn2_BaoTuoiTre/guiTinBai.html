@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Sinh viên CNTT">
+    <meta name="description" content="Trang bạn đọc gửi tin bài, phản ánh">
+    <title>Gửi tin bài bạn đọc - Báo Tuổi Trẻ Online</title>
+</head>
+<body>
+
+    <header><!-- header -->
+        <img src="Img/logo-tuoit.png" alt="Logo Báo Tuổi Trẻ" width="180">
+        <h1>Báo Tuổi Trẻ Online</h1>
+        <p><strong>Đỏ - Trẻ - Sài Gòn</strong></p>
+
+        <nav>
+            <ul>
+                <li><a href="index.html#tin-noi-bat">Tin nổi bật</a></li>
+                <li><a href="index.html#bang-tin-chuyen-muc">Chuyên mục tổng hợp</a></li>
+                <li><a href="tinNong.html">Tin nóng 24h</a></li>
+                <li><a href="#">Gửi tin bài bạn đọc</a></li>
+            </ul>
+        </nav>
+    </header><!-- end header -->
+
+    <hr>
+
+    <main><!-- main -->
+        <h2>Bạn đọc gửi tin bài &amp; phản ánh</h2>
+
+        <form action="http://httpbin.org/get" method="get">
+            <fieldset>
+                <legend>Thông tin bạn đọc và nội dung bài viết</legend>
+                <p>
+                    <label for="ho-ten">Họ và tên:</label>
+                    <input type="text" name="ho-ten" id="ho-ten" placeholder="Nhập họ tên của bạn" required>
+                </p>
+                <p>
+                    <label for="email">Email liên hệ:</label>
+                    <input type="email" name="email" id="email" placeholder="Nhập email của bạn" required>
+                </p>
+                <p>
+                    <label for="chuyen-muc">Chuyên mục gửi bài:</label>
+                    <select name="chuyen-muc" id="chuyen-muc">
+                        <option value="thoi-su">Thời sự</option>
+                        <option value="giao-duc">Giáo dục</option>
+                        <option value="cong-nghe">Công nghệ</option>
+                        <option value="ban-doc">Bạn đọc viết</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="noi-dung">Nội dung tin bài:</label><br>
+                    <textarea name="noi-dung" id="noi-dung" cols="50" rows="10" placeholder="Nhập nội dung tin bài hoặc phản ánh tại đây..." required></textarea>
+                </p>
+            </fieldset>
+            <button type="submit">Gửi tin bài</button>
+            <button type="reset">Nhập lại</button>
+        </form>
+
+        <p><a href="#">Trở về đầu trang</a></p>
+    </main><!-- end main -->
+
+    <hr>
+
+    <footer><!-- footer -->
+        <p>Bản quyền &copy; 2026 Báo Tuổi Trẻ Online.</p>
+        <p>Đường dây nóng: <a href="tel:0918033133">0918.033.133</a></p>
+    </footer><!-- end footer -->
+
+</body>
+</html>

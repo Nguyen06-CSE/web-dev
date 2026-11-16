@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 10.1 - Các phần tử tạo bố cục trang web (HTML5)</title>
+</head>
+<body>
+
+    <!-- 1. PHẦN ĐẦU TRANG WEB (HEADER & NAV) -->
+    <header>
+        <img src="https://via.placeholder.com/80x80?text=Logo" alt="Logo Blog">
+        <h1>Trang blog của Tèo</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- 2. VÙNG NỘI DUNG CHÍNH (MAIN) -->
+    <main>
+        <h1>Nội dung chính của trang</h1>
+
+        <!-- Ví dụ Article chứa Header, nhiều Section và Footer -->
+        <article>
+            <header>
+                <h2>Tiêu đề bài viết mẫu</h2>
+                <p>Người viết: Nguyễn Văn Tèo</p>
+                <p>Ngày xuất bản: 11/11/2022</p>
+            </header>
+
+            <section>
+                <h3>Mở đầu</h3>
+                <p>Nội dung của phần mở đầu bài viết sử dụng thẻ <code>&lt;section&gt;</code> bên trong <code>&lt;article&gt;</code>.</p>
+            </section>
+
+            <section>
+                <h3>Nội dung 1</h3>
+                <p>Nội dung chi tiết phần 1 của bài viết.</p>
+            </section>
+
+            <section>
+                <h3>Kết luận</h3>
+                <p>Nội dung phần kết luận của bài viết.</p>
+            </section>
+
+            <footer>
+                <p><small>Copyright &copy; 2022 Tèo.</small></p>
+                <nav>
+                    <ul>
+                        <li><a href="#prev">Previous</a></li>
+                        <li><a href="#next">Next</a></li>
+                    </ul>
+                </nav>
+            </footer>
+        </article>
+
+        <hr>
+
+        <!-- Ví dụ Section chứa nhiều Article -->
+        <section>
+            <h2>Các bài viết mới</h2>
+
+            <article>
+                <h3>Tiêu đề của bài viết 1</h3>
+                <ul>
+                    <li>Tên tác giả 1</li>
+                    <li>Thuộc thể loại: Bài viết mới</li>
+                </ul>
+                <p>Phần nội dung tóm tắt của bài viết 1.</p>
+            </article>
+
+            <article>
+                <h3>Tiêu đề của bài viết 2</h3>
+                <ul>
+                    <li>Tên tác giả 2</li>
+                    <li>Thuộc thể loại: Bài viết mới</li>
+                </ul>
+                <p>Phần nội dung tóm tắt của bài viết 2.</p>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Ví dụ phần tử Aside (Thông tin bổ trợ) -->
+        <section>
+            <h2>Một số kĩ năng sinh viên nên chuẩn bị</h2>
+            <p>Trong thời gian học tại trường Đại học, các bạn nên trang bị cho mình những thứ sau, để khi ra trường có thể tự tin làm việc, và hạnh phúc trong công việc.</p>
+            <p>Những thứ các bạn nên để ý là: kiến thức chuyên môn và cuộc sống, kĩ năng làm nghề, kĩ năng làm việc, kĩ năng sống; thái độ trong giao tiếp, trong công việc và thái độ với nghề mà mình đang theo đuổi.</p>
+
+            <aside>
+                <h3>Một số cuốn sách về định hướng nên đọc</h3>
+                <ul>
+                    <li>Khuyến học</li>
+                    <li>Cà phê cùng Tony</li>
+                    <li>Khởi hành</li>
+                    <li>Đúng việc</li>
+                    <li>Trên đường băng</li>
+                    <li>Code dạo ký sự</li>
+                </ul>
+            </aside>
+        </section>
+    </main>
+
+    <hr>
+
+    <!-- 3. PHẦN CHÂN TRANG (FOOTER & ADDRESS) -->
+    <footer>
+        <address>
+            Đóng góp bởi <a href="../authors/teo/">Văn Tèo</a>,
+            <a href="http://www.nhaxuatban.com/">Nhà Xuất Bản</a>
+        </address>
+    </footer>
+
+</body>
+</html>
