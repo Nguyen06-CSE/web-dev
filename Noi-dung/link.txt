@@ -1,0 +1,93 @@
+Bài 1. Nghề làm web
+   -> link1: https://legiacong.blogspot.com/2022/09/web-5-lam-web-la-lam-gi.html
+   -> link2: https://legiacong.blogspot.com/2022/09/web-6-muon-lam-web-can-hoc-nhung-gi.html
+   -> link3: https://legiacong.blogspot.com/2022/11/web-7-lo-trinh-hoc-web-front-end.html
+
+Bài 2. Web
+   -> link: https://legiacong.blogspot.com/2021/06/web-1-web-la-gi.html
+
+Bài 3. Trình duyệt web
+   -> link: http://legiacong.blogspot.com/2021/06/web-2-trinh-duyet-web-la-gi.html
+
+Bài 4. URL, siêu liên kết và siêu văn bản
+   -> link: http://legiacong.blogspot.com/2021/07/web-3-url-sieu-lien-ket-va-sieu-van-ban.html
+
+Bài 5. HTML - Tạo một trang web đơn giản
+   -> link: http://legiacong.blogspot.com/2021/09/web-front-end-4-htmltong-quan-block.html
+
+Bài 6. HTML - Hoàn thiện trang web đơn giản
+   -> link: https://legiacong.blogspot.com/2021/09/web-front-end-5-htmlhoan-thien-trang.html
+
+Bài 7. HTML - Hiển thị văn bản
+   -> link: https://legiacong.blogspot.com/2021/10/web-front-end-6-html-hien-thi-van-ban.html
+
+Bài 8. HTML - Bố cục một trang web
+   -> link: https://legiacong.blogspot.com/2021/10/web-front-end-7-html-to-chuc-trang-noi.html
+
+Bài 9. HTML - Phần mềm lập trình web
+   -> link: https://legiacong.blogspot.com/2021/10/web-front-end-8-html-phan-mem-lap-trinh.html
+
+Bài 10. CSS - Tổng quan
+   -> link: https://legiacong.blogspot.com/2023/03/web-front-end-28-css-1-tong-quan.html
+
+Bài 11. CSS - Sự kế thừa, xếp lớp
+   -> link: https://legiacong.blogspot.com/2023/03/web-front-end-29-css-2-su-ke-thua-xep.html
+
+Bài 12. CSS - Định chuẩn CSS, box model và đơn vị đo
+   -> link: https://legiacong.blogspot.com/2023/03/web-front-end-30-css-3-tong-quan-bai.html
+
+Bài 13. CSS - Bài tập & Ôn tập (Tổng quan)
+   -> link: https://legiacong.blogspot.com/2023/04/web-front-end-31-css-4-bai-tap-on-tap.html
+
+Bài 14. JS - Làm quen với JavaScript
+   -> Không có link
+
+Bài 15. JS - Cú pháp, kiểu dữ liệu và biến
+   -> Không có link
+
+Bài 16. HTML - Hiển thị văn bản
+   -> link: https://legiacong.blogspot.com/2021/10/web-front-end-6-html-hien-thi-van-ban.html
+
+Bài 17. HTML - Bố cục trang web
+   -> link: https://legiacong.blogspot.com/2021/10/web-front-end-7-html-to-chuc-trang-noi.html
+
+Bài 18. HTML - Form
+   -> link1: https://legiacong.blogspot.com/2023/02/web-front-end-19-html-tong-quan-ve-form.html
+   -> control: https://legiacong.blogspot.com/2023/02/web-front-end-20-html-form-controls.html
+   -> BaiTap: https://legiacong.blogspot.com/2023/02/web-front-end-21-html-form-label-bo-cuc.html
+
+Bài 19. Dự án HTML
+   -> link1: https://legiacong.blogspot.com/2023/03/web-front-end-24-html-tap-lam-du-anda1.html
+   -> link2: https://legiacong.blogspot.com/2023/03/web-front-end-25-html-tap-lam-du-anda1.html
+   -> link3: https://legiacong.blogspot.com/2023/03/web-front-end-26-html-tap-lam-du-anda1.html
+   -> link4: https://legiacong.blogspot.com/2023/03/web-front-end-27-html-tap-lam-du-ua.html
+
+Bài 20. CSS - Phông chữ
+   -> link1: https://legiacong.blogspot.com/2023/04/web-front-end-32-css-5-inh-dang-van-ban.html
+   -> link2: https://legiacong.blogspot.com/2023/04/css-6-inh-dang-van-ban-web-fonts.html
+   -> link3: https://legiacong.blogspot.com/2023/05/css-7-inh-dang-chu.html
+
+Bài 21. Bộ chọn
+   -> Bộ chọn: https://legiacong.blogspot.com/2023/05/css-8-bo-chon.html
+
+Bài 22. Định dạng màu
+   -> Định dạng màu: https://legiacong.blogspot.com/2023/06/css-10-inh-dang-mau.html
+
+Bài 23. Bộ chọn theo trạng thái & thuộc tính
+   -> Bộ chọn theo trạng thái & thuộc tính: https://legiacong.blogspot.com/2023/06/css-11-bo-chon-theo-trang-thai-thuoc.html
+
+Bài 24. Ảnh nền
+   -> link1: https://legiacong.blogspot.com/2023/07/css-12-anh-nen-1.html
+   -> link2: https://legiacong.blogspot.com/2023/08/css-13-anh-nen-2.html
+
+Bài 25. Mô hình cái hộp
+   -> Mô hình cái hộp: https://legiacong.blogspot.com/2023/08/css-14-mo-hinh-cai-hop-1.html
+
+Bài 26. Mô hình cái hộp (bài tập)
+   -> Mô hình cái hộp (bài tập): https://legiacong.blogspot.com/2023/08/css-15-mo-hinh-cai-hop-2.html
+
+Bài 27. JavaScript (4) - Kiểu dữ liệu number + Calculator
+   -> Không có link
+
+Bài 28. Đọc hiểu được tài liệu tiếng Anh (Chương 6 - The Document Object Model: Ebook)
+   -> Ebook: https://drive.google.com/file/d/1hOMgGtwrBpEJ6A-4z40Rw4JZ8mKMKf-R/view?usp=sharing
