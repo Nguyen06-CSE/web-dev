@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài 16.1 - Thực hành các đoạn mã lý thuyết HTML Hiển thị văn bản</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px;
+      background-color: #f9fafb;
+    }
+    .section-box {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+    .section-title {
+      color: #1e3a8a;
+      border-bottom: 2px solid #3b82f6;
+      padding-bottom: 8px;
+      margin-top: 0;
+    }
+    .demo-title {
+      color: #4b5563;
+      font-size: 1.1rem;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+    blockquote {
+      background: #f8fafc;
+      border-left: 4px solid #3b82f6;
+      margin: 16px 0;
+      padding: 12px 20px;
+      font-style: italic;
+      color: #475569;
+    }
+    pre {
+      background: #1e293b;
+      color: #f8fafc;
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-family: Consolas, "Courier New", Courier, monospace;
+      font-size: 14px;
+    }
+    code {
+      font-family: Consolas, "Courier New", Courier, monospace;
+    }
+    figure {
+      margin: 16px 0;
+      padding: 16px;
+      background: #f1f5f9;
+      border-radius: 8px;
+      text-align: center;
+    }
+    figure img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    figcaption {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      color: #64748b;
+      font-style: italic;
+    }
+    .note {
+      background: #fffbeb;
+      border-left: 4px solid #f59e0b;
+      padding: 12px 16px;
+      margin: 12px 0;
+      font-size: 0.95rem;
+      color: #92400e;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 10px 14px;
+      text-align: left;
+    }
+    th {
+      background-color: #f1f5f9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================== -->
+  <!-- 9.1 Đoạn văn bản và đề mục                  -->
+  <!-- ========================================== -->
+  <div class="section-box">
+    <h2 class="section-title">9.1 Đoạn văn bản và đề mục</h2>
+
+    <h3 class="demo-title">a. Ví dụ về đoạn văn bản (&lt;p&gt;)</h3>
+    <p>Ngày đầu tiên đi học</p>
+    <p>Vậy, làm web là làm ra sản phẩm mà nó cung cấp các tài nguyên web cho người dùng. Sản phẩm này chính là các trang web được hiển thị trong các trình duyệt.</p>
+
+    <h3 class="demo-title">b. Ví dụ về hệ thống đề mục (&lt;h1&gt; đến &lt;h6&gt;)</h3>
+    <h1>1 Mở đầu</h1>
+    <h2>1.1 Về tài liệu này</h2>
+    <p>Tài liệu này thích hợp cho người chưa biết gì về làm web, và muốn học (hoặc tự học) để có thể theo nghề làm web.</p>
+
+    <h2>1.2 Làm web là làm gì</h2>
+    <p>Để trả lời câu hỏi “làm web là làm gì”, hãy bắt đầu từ nhu cầu của người sử dụng.</p>
+
+    <h1>2 HTML căn bản</h1>
+    <h2>2.1 Tạo một trang web đơn giản</h2>
+    <h3>2.1.1 Chuẩn bị nội dung cho trang web</h3>
+    <p>Bước 1. Nhập nội dung</p>
+    <p>Bước 2. Lưu lại thành tập tin index.html</p>
+
+    <h3>2.1.2 Cấu trúc cơ bản của một tài liệu HTML</h3>
+    <p>Điều quan trọng nhất cần biết là tài liệu HTML được tạo ra từ các phần tử HTML. Toàn bộ tài liệu HTML là tập hợp của rất nhiều các phần tử HTML khác nhau tạo thành.</p>
+
+    <h3>2.1.3 Thêm cấu trúc và ngữ nghĩa cho một tài liệu HTML</h3>
+    <p>Như đã biết, HTML là công cụ được sử dụng để hiển thị nội dung lên trình duyệt. Tuy nhiên, cần phải hiểu là HTML chỉ tập trung vào việc tổ chức nội dung sao cho nó có tính cấu trúc, có tính ngữ nghĩa.</p>
+
+    <h3 class="demo-title">c. Đánh dấu kết thúc một chủ đề (&lt;hr&gt;)</h3>
+    <h1>The Main Languages of the Web</h1>
+    <p>HTML is the standard markup language for creating Web pages. HTML describes the structure of a Web page, and consists of a series of elements. HTML elements tell the browser how to display the content.</p>
+
+    <hr>
+
+    <p>CSS is a language that describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work, because it can control the layout of multiple web pages all at once.</p>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 9.2 Danh sách                              -->
+  <!-- ========================================== -->
+  <div class="section-box">
+    <h2 class="section-title">9.2 Danh sách</h2>
+
+    <h3 class="demo-title">a. Danh sách không có thứ tự (&lt;ul&gt; & &lt;li&gt;)</h3>
+    <ul>
+      <li>Mãng cầu</li>
+      <li>Trái dừa</li>
+      <li>Ổ qua</li>
+      <li>Khoai môn</li>
+    </ul>
+
+    <div class="note">
+      <strong>Lưu ý cú pháp:</strong> Trực tiếp sau thẻ mở <code>&lt;ul&gt;</code> hoặc <code>&lt;ol&gt;</code> chỉ được phép chứa các phần tử <code>&lt;li&gt;</code>. Không được chèn trực tiếp văn bản bên ngoài thẻ <code>&lt;li&gt;</code>, nếu không validator.w3.org sẽ báo lỗi.
+    </div>
+
+    <h3 class="demo-title">b. Danh sách có thứ tự (&lt;ol&gt; & &lt;li&gt;)</h3>
+    <ol>
+      <li>Lê Văn Bơ</li>
+      <li>Trần Văn Mít</li>
+      <li>Nguyễn Văn Tèo</li>
+    </ol>
+
+    <h3 class="demo-title">c. Danh sách có thứ tự với thuộc tính start="4"</h3>
+    <ol start="4">
+      <li>Lê Văn Bơ</li>
+      <li>Trần Văn Mít</li>
+      <li>Nguyễn Văn Tèo</li>
+    </ol>
+
+    <h3 class="demo-title">d. Các kiểu định dạng khác nhau của &lt;ol&gt; (type và start)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Mã nguồn HTML</th>
+          <th>Kết quả hiển thị</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>&lt;ol type="i" start="4"&gt;</code></td>
+          <td>
+            <ol type="i" start="4">
+              <li>Mục số 4 (iv)</li>
+              <li>Mục số 5 (v)</li>
+            </ol>
+          </td>
+        </tr>
+        <tr>
+          <td><code>&lt;ol type="I" start="4"&gt;</code></td>
+          <td>
+            <ol type="I" start="4">
+              <li>Mục số 4 (IV)</li>
+              <li>Mục số 5 (V)</li>
+            </ol>
+          </td>
+        </tr>
+        <tr>
+          <td><code>&lt;ol type="A" start="4"&gt;</code></td>
+          <td>
+            <ol type="A" start="4">
+              <li>Mục chữ D</li>
+              <li>Mục chữ E</li>
+            </ol>
+          </td>
+        </tr>
+        <tr>
+          <td><code>&lt;ol type="a" start="4"&gt;</code></td>
+          <td>
+            <ol type="a" start="4">
+              <li>Mục chữ d</li>
+              <li>Mục chữ e</li>
+            </ol>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="demo-title">e. Danh sách mô tả (&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;)</h3>
+    <dl>
+      <dt><strong>HTML</strong></dt>
+      <dd>Hypertext Markup Language</dd>
+      <dt><strong>WWW</strong></dt>
+      <dd>World Wide Web</dd>
+    </dl>
+
+    <div class="note">
+      <strong>Chú ý về tính hợp lệ:</strong> Thẻ <code>&lt;dt&gt;</code> không được chứa các thẻ Heading (như <code>&lt;h1&gt;</code>) hay phần tử nhóm nội dung khối (như <code>&lt;p&gt;</code>), nếu đặt <code>&lt;dt&gt;&lt;h1&gt;HTML&lt;/h1&gt;&lt;/dt&gt;</code> thì W3C Validator sẽ báo lỗi.
+    </div>
+
+    <h3 class="demo-title">f. Danh sách lồng nhau (Nested List)</h3>
+    <ol>
+      <li>Mục 1</li>
+      <li>
+        Mục 2
+        <ul>
+          <li>Nội dung 1</li>
+          <li>Nội dung 2</li>
+        </ul>
+      </li>
+      <li>Mục 3</li>
+    </ol>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 9.3 Một số phần tử hiển thị nội dung khác -->
+  <!-- ========================================== -->
+  <div class="section-box">
+    <h2 class="section-title">9.3 Một số phần tử hiển thị nội dung khác</h2>
+
+    <h3 class="demo-title">a. Trích dẫn dài (&lt;blockquote&gt;)</h3>
+    <p>Đôi khi cũng phải nhìn lại bản thân, phải yêu bản thân mình, phải thương lấy nó, bởi nó là người bạn gần gũi nhất, trung thành nhất, yêu chứ không nuông chiều, như Sophia Loren đã nói:</p>
+    <blockquote>
+      <p>Hãy yêu bản thân vô điều kiện, như là bạn yêu những người thân thiết với mình bất chấp khuyết điểm của họ.</p>
+      <p>Love yourself unconditionally, just as you love those closest to you despite their faults.</p>
+    </blockquote>
+
+    <h3 class="demo-title">b. So sánh văn bản định dạng sẵn (&lt;pre&gt;) và đoạn văn bản thông thường (&lt;p&gt;)</h3>
+    <p><strong>Hiển thị với &lt;pre&gt; (giữ nguyên khoảng trắng và xuống dòng):</strong></p>
+    <pre>
+NGÀY ĐẦU TIÊN ĐI HỌC
+
+Ngày đầu tiên đi học
+     Mẹ dắt tay đến trường
+     Em vừa đi vừa khóc
+     Mẹ dỗ dành bên em
+Tác giả: Viễn Phương
+    </pre>
+
+    <p><strong>Hiển thị với &lt;p&gt; (trình duyệt gộp các khoảng trắng liên tiếp và bỏ qua ký tự xuống hàng):</strong></p>
+    <p>
+NGÀY ĐẦU TIÊN ĐI HỌC
+
+Ngày đầu tiên đi học
+     Mẹ dắt tay đến trường
+     Em vừa đi vừa khóc
+     Mẹ dỗ dành bên em
+Tác giả: Viễn Phương
+    </p>
+
+    <h3 class="demo-title">c. Phần tử hình ảnh và chú thích (&lt;figure&gt; & &lt;figcaption&gt;)</h3>
+    <figure>
+      <img src="../images/img1.jpeg" alt="Cấu trúc một tài liệu HTML">
+      <figcaption>Hình 1: Cấu trúc một tài liệu HTML</figcaption>
+    </figure>
+
+    <h3 class="demo-title">d. Phần tử chứa khối mã nguồn và chú thích</h3>
+    <figure>
+      <pre><code>body {
+    background-color: #000;
+    color: red;
+}</code></pre>
+      <figcaption>Cú pháp viết CSS</figcaption>
+    </figure>
+  </div>
+
+</body>
+</html>

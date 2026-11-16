@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 16.3 - Tạo Breadcrumbs (Đường dẫn phân cấp)</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f8fafc;
+      padding: 40px 20px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      color: #1e293b;
+      margin-bottom: 8px;
+    }
+
+    p.desc {
+      color: #64748b;
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+    }
+
+    /* ========================================================
+       BREADCRUMB COMPONENT (Mô phỏng chính xác hình breadcrumbs.png)
+       ======================================================== */
+    .breadcrumb-wrapper {
+      border-top: 3px solid #f6cf9c; /* Đường viền màu cam nhạt/be như trong hình */
+      padding-top: 12px;
+      margin-bottom: 30px;
+    }
+
+    .breadcrumb {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0;
+      font-size: 14.5px;
+    }
+
+    .breadcrumb-item {
+      display: inline-flex;
+      align-items: center;
+      color: #555555;
+    }
+
+    .breadcrumb-item a {
+      color: #0056b3;
+      text-decoration: none;
+      transition: color 0.15s ease, text-decoration 0.15s ease;
+    }
+
+    .breadcrumb-item a:hover {
+      color: #003d82;
+      text-decoration: underline;
+    }
+
+    /* Dấu phân cách gạch chéo '/' giữa các mục */
+    .breadcrumb-item + .breadcrumb-item::before {
+      content: "/";
+      padding: 0 8px;
+      color: #6c757d;
+      font-weight: normal;
+    }
+
+    /* Mục trang hiện tại (Dell) */
+    .breadcrumb-item.active {
+      color: #212529;
+      font-weight: 500;
+    }
+
+    /* Ghi chú & ảnh đối chiếu */
+    .reference-section {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px dashed #e2e8f0;
+    }
+
+    .reference-section h3 {
+      font-size: 1rem;
+      color: #475569;
+      margin-bottom: 10px;
+    }
+
+    .reference-section img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      padding: 4px;
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Bài tập 16.3: Tạo Breadcrumbs (Đường dẫn phân cấp)</h2>
+    <p class="desc">Sử dụng danh sách ngữ nghĩa (<code>&lt;nav&gt;</code>, <code>&lt;ul&gt;</code>/<code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code>) để tạo thanh điều hướng đường dẫn vị trí trang.</p>
+
+    <!-- Thành phần Breadcrumb chính -->
+    <div class="breadcrumb-wrapper">
+      <nav aria-label="breadcrumb">
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#dien-tu">Điện tử</a></li>
+          <li class="breadcrumb-item"><a href="#may-tinh">Máy tính</a></li>
+          <li class="breadcrumb-item"><a href="#laptop">Laptop</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Dell</li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Phần ảnh đối chiếu từ đề bài -->
+    <div class="reference-section">
+      <h3>Hình ảnh mẫu trong đề bài (breadcrumbs.png):</h3>
+      <img src="../images/breadcrumbs.png" alt="Ảnh mẫu Breadcrumbs đề bài">
+    </div>
+  </div>
+
+</body>
+</html>

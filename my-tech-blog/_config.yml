@@ -1,0 +1,19 @@
+*File này dùng để cấu hình thông tin chung cho Blog trên GitHub Pages.*
+
+```yaml
+title: "Khoi Nguyen | Backend & Tech Blog"
+author: "Cao Khôi Nguyên"
+email: "nguyen.cse06@gmail.com"
+description: "Blog chia sẻ hành trình học tập, kiến thức Backend (.NET, Node.js, FastAPI), thiết kế hệ thống và trải nghiệm lập trình."
+url: "[https://Nguyen06-CSE.github.io](https://Nguyen06-CSE.github.io)"
+theme: minima
+
+# Cấu hình mạng xã hội
+github_username: Nguyen06-CSE
+linkedin_username: alexnguyen-fs
+
+# Jekyll options
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
